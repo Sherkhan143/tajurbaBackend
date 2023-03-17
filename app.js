@@ -24,11 +24,16 @@ const port = process.env.PORT || 3005;
 const app = express();
 
 var options = {
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'root',
-    database: 'tajurba'
+    // host: 'localhost',
+    // port: 3306,
+    // user: 'root',
+    // password: 'root',
+    // database: 'tajurba',
+    host : "sql10.freesqldatabase.com",
+    user: "sql10606488",
+    password: "AmHEigxuQp",
+    database:"sql10606488",
+    port : 3306,
 };
 
 var sessionConnection = mysql.createConnection(options);
