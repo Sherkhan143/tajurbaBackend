@@ -1,0 +1,146 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+   <div class="full_container">
+      <div class="inner_container">
+         <!-- Sidebar  -->
+         {{>admin/sidebar}}
+         <!-- end sidebar -->
+         <!-- right content -->
+         <div id="content">
+            <!-- topbar -->
+            {{>admin/topbar}}
+            <!-- end topbar -->
+            <!-- dashboard inner -->
+            <div class="midde_cont">
+               <div class="container-fluid">
+                  <div class="row column_title">
+                     <div class="col-md-12">
+                        <div class="page_title">
+                           <h2>Banners</h2>
+                           {{#ifnoteq success ''}}
+                           <div class="alert alert-success mt-3" role="alert">
+                              {{success}}
+                           </div>
+                           {{/ifnoteq}}
+                        </div>
+                     </div>
+                  </div>
+                  <form action="/admin/banner" method="post">
+                     <div class="row">
+                        <!-- table section -->
+                        <div>
+                           <p style="padding:15px">
+                              <a href="/admin/banner/add-banner"><button type="button"
+                                    class="btn btn-success">Add</button></a>
+                              <button formaction="/admin/banner/multiPublish?_method=put"
+                                 class="btn btn-success multiButton" disabled = "disabled">Publish</button>
+                              <button formaction="/admin/banner/multiUnPublish?_method=put"
+                                 class="btn btn-success multiButton" disabled = "disabled">Unpublish</button>
+                              <button formaction="/admin/banner/multiDelete?_method=delete"
+                                 class="btn btn-success multiButton" disabled = "disabled">Delete</button>
+                           </p>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0 d-flex justify-content-between w-100">
+                                    <h2>Banner List</h2>
+                                 </div>
+                              </div>
+
+                              <div class="table_section padding_infor_info">
+
+                                 <span id="msgact">
+                                 </span>
+
+                                 <span id="asgact"></span>
+                                 <span id="dsgact"></span>
+
+                                 <div class="table-responsive-sm">
+                                    <table class="table">
+                                       <thead>
+                                          <tr>
+                                             <th><input type="checkbox" class="multiCheck" onchange="checkAll(this)" id="checkall"
+                                                   name="checkall"></th>
+                                             <th>#</th>
+                                             <th>Banner Image</th>
+                                             <th>Title 1</th>
+                                             <th>Title 2</th>
+                                             <th>Title 3</th>
+                                             <th>Title 4</th>
+                                             <th>Action</th>
+                                          </tr>
+                                       </thead>
+                                       {{#banners}}
+                                       <tbody>
+                                          <tr>
+                                             <th><input type="checkbox" class="checbox singleChecked" value="{{id}}" name="checkbox"
+                                                   onchange="changeButtonState"></th>
+                                             <td>{{incitement @index}}</td>
+                                             <td class="img-column"
+                                                style="width: 175px;height:150px;object-fit:contain">
+                                                <img src="/static/user/images/uploaded_images/{{banner_image}}"
+                                                   height="100%" alt="thumbnail">
+                                             </td>
+                                             <td>{{title_1}}</td>
+                                             <td>{{title_2}}</td>
+                                             <td>{{title_3}}</td>
+                                             <td>{{title_4}}</td>
+                                             <td>
+                                                <div class="btn-wrapper">
+                                                   <style>
+                                                      button i {
+                                                         color: #000;
+                                                      }
+                                                   </style>
+                                                   <li class="btn">
+                                                      <a href="/admin/banner/edit/{{id}}">
+                                                         <i class="fa-regular fa-pen-to-square"></i>
+                                                      </a>
+                                                   </li>
+                                                   <li class="btn">
+                                                      <a href="/admin/banner/delete/{{id}}">
+                                                         <i class="fa-solid fa-trash"></i>
+                                                      </a>
+                                                   </li>
+                                                   {{!-- <li class="btn">
+                                                      <a href="">
+                                                         <label class="switch">
+                                                            <input type="checkbox" name="publishBtn" id="play"
+                                                               onclick="switchBtn()" class="" value="0">
+                                                            <span class="slider round"></span>
+                                                         </label>
+                                                      </a>
+                                                   </li> --}}
+                                                   <div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                  </form>
+                  {{/banners}}
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- table section -->
+
+   </div>
+   </div>
+
+   <!-- footer -->
+   {{>admin/footer}}
+   </div>
+   <!-- end dashboard inner -->
+   </div>
+   </div>
+   </div>
+   {{>admin/scripts}}
+
+
+
+
+</body>
+
+</html>

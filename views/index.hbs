@@ -1,0 +1,688 @@
+<!-- Start Header Area -->
+{{>user/header}}
+<!-- End Header Area -->
+<!-- Start Nav Area -->
+{{>user/nav}}
+<!-- End Nav Area -->
+<!-- ========================= Start Page ========================= -->
+
+</head>
+
+<body>
+<script>
+    var name = "moin";
+</script>
+    
+<!-- Start Hero Area -->
+<section class="hero-area">
+    <!--Slider -->
+    <div class="hero-inner">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-1 col-width col-bg"></div>
+                <div class="col-10  col-width-b">
+                    <div class="my-slider" id="hero-slider">
+                        {{#banners}}
+                        <div class="home-slider slider-item slider-bg-img-a">
+                            <div class="hero-text ml-150">
+                                <h3 class="wow fadeInUp pb-30 hero-head " data-wow-delay=".3">{{title_1}}</h3>
+                                <h2 class="wow fadeInUp fw-4 pb-15 hero-head " data-wow-delay=".5s">{{title_2}}</h2>
+                                <h1 class="wow fadeInUp hero-head " data-wow-delay=".5s">{{title_3}}</h1>
+                                <p class="wow fadeInUp hero-sub-txt fw-5 text-capitalize">{{title_4}}</p>
+                            </div>
+                        </div>
+                        {{/banners}}
+                    </div>
+                </div>
+                <div class="col-1 col-width">
+                    <div class="fixed-txt">
+                        <h4><span class="l-txt">NATIONAL</span>&nbsp;<span class="r-txt">ENTREPRENEUR</span>&nbsp;<span class="r-txt">SUMMIT</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Slider -->
+</section>
+<!--/ End Hero Area -->
+
+<!-- Start Brand Area -->
+<div class="brand-area section pt-0" id="hero-cta-section">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="cta-head-wrapper d-flex align-items-center justify-content-center">
+                    <h3 class="text-white text-uppercase">start building your community today</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-12 d-flex align-items-end">
+                <div class="section-title p-0 wow fadeInLeft" data-wow-delay=".2s">
+                    <h2 class="mb-0">lead. learn. <span class="lava-color">connect</span> </h2>
+                    <p class="sub-heading">our impact</p>
+                </div>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="brand-logo-wrapper wow fadeInRight" data-wow-delay=".4s">
+                    <ul class="brand-list liststyle d-flex flex-wrap justify-content-center">
+                        <li>
+                            <div class="cta-wrapper">
+                                <h2 class="lava-color">291000</h2>
+                                <h3 class="text-capitalize">members <br> across india</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cta-wrapper">
+                                <h2 class="lava-color">10800</h2>
+                                <h3 class="text-capitalize">global <br> chapters</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cta-wrapper">
+                                <h2 class="lava-color">19.4M</h2>
+                                <h3 class="text-capitalize">generated <br> business</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button text-center mt-5 pt-sm-5">
+                <a href="#get-in-touch-section" class="d-block">
+                    <button class="btn">join now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Brand Area -->
+
+<!-- CTA + Counter Section END -->
+
+
+<!-- ==========featued in section start========== -->
+
+<section class="section pt-0" id="featured-in-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title align-left">
+                    <h2 class="mb-0">featured <span class="lava-color">in</span></h2>
+                    <p class="sub-heading">featured in</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-wrapper position-relative">
+            <div class="row feature-slider">
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/hindustan.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/toi.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/forbes.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/yahoo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/hindustan.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/toi.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/forbes.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 slider-item">
+                    <div class="featured-img-wrapper">
+                        <img src="/static/user/images/featuredin/yahoo.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div id="custom_controlsContainer">
+                <a id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                <a id="next"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ==========featued in section end========== -->
+
+
+
+<!-- ==========latest news section start============= -->
+
+<div class="latest-news-area section" id="latest-news-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title align-left">
+                    <h2 class="mb-0 text-white">latest @ <span class="lava-color">tajurba</span> </h2>
+                    <p class="sub-heading text-white">latest @ tajurba</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{#news}}
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single News -->
+                <div class="single-news wow fadeInUp" data-wow-delay=".2s">
+                    <div class="image">
+                        <img class="thumb" src="/static/user/images/blog/{{news_image}}" alt="#">
+
+                    </div>
+                    <div class="content-body">
+                        <h4 class="title"><a>{{title}}</a></h4>
+                        <p class="my-3">{{description}}</p>
+                        <div class="meta-details">
+                            <a href="/news/{{id}}">
+                                <span class="text-uppercase lava-color">read more</span>
+                            </a>
+                            <span class="text-uppercase text-white">join now</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single News -->
+            </div>
+            {{/news}}
+        </div>
+    </div>
+</div>
+
+<!-- ==========latest news section end============= -->
+
+<!-- Start Intro Video Area -->
+<section class="intro-video-area overlay section pb-0" id="testimonial-section">
+    <div class="container ">
+        <div class="testi-wrapper position-relative">
+            <div class="row testimonial-slider">
+                {{#testimonials}}
+                <div class="col-lg-12 slider-item">
+                    <div class="intro-video-play testimonial-wrapper d-flex align-items-center flex-column slider-item">
+                        <div class="testi-img-wrapper">
+                            <img src="/static/user/images/testimonial/{{profile_image}}" alt="">
+                        </div>
+                        <h6 class="text-white text-uppercase">{{name}}</h6>
+                        <p class="text-white text-center w-60">{{description}}</p>
+                    </div>
+                </div>
+                {{/testimonials}}
+            </div> <!-- row -->
+            <div id="testi_controlsContainer">
+                <a id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                <a id="next"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid mt-5 pt-5">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="testi-bottom-wrapper d-flex align-items-center justify-content-center ">
+                    <h2 class="text-white heading-font">what people say</h2>
+                    <p class="text-white sub-heading">an organisation you can bank upon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Intro Video Area -->
+
+
+<!-- ====why tajurba section start======= -->
+
+<section class="section" id="why-tajurba-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title align-left">
+                    <h2 class="mb-0 ">why <span class="lava-color">tajurba</span> </h2>
+                    <p class="sub-heading">why choose us over any other business network in india</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="left-grid-wrapper grid-wrapper d-flex flex-column">
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">grow your business at 10X speed</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">build a network that brings in business</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mid-grid-wrapper grid-wrapper d-flex flex-column">
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">incubators for budding Entrepreneur</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">stay updated with the industry trends</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="right-grid-wrapper grid-wrapper d-flex flex-column">
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">get mentored</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                            <div class="grids">
+                                <div class="grid-content">
+                                    <h3 class="grid-title text-white text-center">seek investment from angel groups</h3>
+                                    <p class="text-white text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum enim architecto magni impedit tempore est facilis, incidunt optio, vel quasi, quidem id maiores corporis dignissimos nemo at similique eaque?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====why tajurba section end======= -->
+
+<!-- =======member program strip start========= -->
+
+<section class="intro-video-area overlay section" id="member-strip">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title white-text mb-0">
+                    <span class="wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">Member Program</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s;">free trainings member programs that suit your needs best</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s;">Join now for free membership and get free training session</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="intro-video-play">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-12">
+                            <div class="button text-center">
+                                <a href="javascript:void()" class="btn m-0  mr-sm-3 order-2">download app <i class="lni lni-android-original"></i></a>
+                                <a href="member-program.php" class="btn m-0 ml-sm-3 mr-sm-3 order-1">join now</a>
+                                <a href="javascript:void()" class="btn m-0 ml-sm-3 order-3">download app <i class="fa-brands fa-apple"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div>
+</section>
+
+<!-- =======member program strip end========= -->
+
+
+
+<!-- =========find meeting section start====== -->
+<section class="section free-version-banner d-non" id="find-meeting-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-left">
+                    <h2 class="mb-0 ">find a <span class="lava-color">meeting</span> </h2>
+                    <p class="sub-heading">member programs that suit your needs best</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="meeting-form position-relative">
+                    <form action="/" method="get" class="d-flex align-items-center justify-content-between">
+                        <input type="text" name="city" placeholder="City">
+                        <input type="text" name="state" placeholder="State">
+                        <div class="button mt-0">
+                            <button class="btn">find a chapter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="upcoming-chapter-section">
+    <div class="container">
+        <div class="row">
+            {{#each eventData}}
+            <div class="col-md-6 mb-3">
+                <div class="chapter-wrapper">
+                    <div class="chapter-left-content chapter-content">
+                        <div>
+                            <p>Tajurba</p>
+                            <h4>{{title}}</h4>
+                        </div>
+                        <h4>Tajurba Premium</h4>
+                    </div>
+                    <div class="chapter-right-content chapter-content">
+                        <div>
+                            <h6 class="text-capitalize">{{chapter_venue}}, {{city}}</h6>
+                            <h5 class="text-capitalize mt-2">Choose date to visit</h5>
+                        </div>
+                        <div>
+                        {{!-- <p class=""></p> --}}
+                        {{!-- {{/each}} --}}
+                        <ul>
+                            {{!-- {{#each events}} --}}
+                            <a href="/participate-now/{{chapter_id}}" class="d-block">
+                                <li>{{day}}, {{date}}</li>
+                            </a>
+                            {{!-- {{/each}} --}}
+                        </ul>
+                        {{!-- {{#each eventData}} --}}
+                    </div>
+                        <h6>{{chapter_venue}}</h6>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section>
+<!-- =========find meeting section end====== -->
+
+
+<!-- ========upcoming events section start======== -->
+
+<section class="section" id="upcoming-event-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title align-left">
+                    <h2 class="mb-0 ">upcoming <span class="lava-color">events</span> </h2>
+                    <p class="sub-heading">latest events</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="upcoming-wrapper position-relative">
+            <div class="row upcoming-slider">
+                {{#events}}
+                <div class="col-md-6 slider-item">
+                    <div class="d-flex flex-column justify-content-between position-relative">
+                        <img src="/static/user/images/upcoming-event/{{event_image}}" alt="">
+                        <div class="event-content">
+                            <h4>{{title}}</h4>
+                            <p>{{event_date}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/events}}
+            </div>
+
+            <div id="upcoming_controlsContainer">
+                <a id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                <a id="next"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========upcoming events section end======== -->
+
+
+<!-- ==========our blog section start============= -->
+
+<div class="latest-news-area section" id="our-blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title align-left">
+                    <h2 class="mb-0 ">our <span class="lava-color">blogs</span> </h2>
+                    <p class="sub-heading">get insights of what’s happening in the business world</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-wrapper position-relative">
+            <div class="row blog-slider">
+                {{#blogs}}
+                <div class="col-lg-3 col-md-6 col-12 slider-item">
+                    <!-- Single News -->
+                    <div class="single-news wow fadeInUp" data-wow-delay=".2s">
+                        <div class="image">
+                            <img class="thumb" src="/static/user/images/uploaded_images/{{feature_image}}" alt="#">
+
+                        </div>
+                        <div class="content-body">
+                            <h4 class="title"><a>{{title}}</a></h4>
+                            <p class="my-3">{{blog_detail}}</p>
+                            <div class="meta-details">
+                                <a href="/blog/{{id}}">
+                                    <span class="text-uppercase lava-color">read more</span>
+                                </a>
+                                <span class="text-uppercase">{{created_at}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+                </div>
+                {{/blogs}}
+            </div>
+
+            <div id="blog_controlsContainer">
+                <a id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                <a id="next"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==========our blog section end============= -->
+
+
+<!-- =========get in touch section start========= -->
+<section class="intro-video-area overlay section" id="get-in-touch-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="section-title align-left mb-0">
+                    <h2 class="mb-0 pb-0 text-white text-uppercase">get in <span class="lava-color">touch</span> </h2>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <form action="/contact-form-process" method="POST" id="form1" class="contact-form-wrapper">
+                    <div class="inputs-wrapper d-flex align-items-end flex-column">
+                        <input type="text" placeholder="name" name="pName">
+                        <input type="text" placeholder="email" name="pEmail">
+                        <input type="text" placeholder="phone" name="pPhone">
+                    </div>
+                    <div class="texts-wrapper">
+                        <textarea cols="30" rows="4" placeholder="message" name="pMessage"></textarea>
+                        <div class="button">
+                            <button class="btn send" type="submit" value="submit">submit</button>
+                        </div>
+                        {{#if msg}}
+                        <h3>Form Submitted</h3>
+                        {{/if}}
+                    </div>
+                </form>
+            </div>
+        </div> <!-- row -->
+    </div>
+
+</section>
+<!-- =========get in touch section start========= -->
+
+<div class="floating-btn">
+    <a href="#" class="btn text-white">download app</a>
+</div>
+
+
+
+<!-- ========================= End Page ========================= -->
+
+
+<!-- Start Footer Area -->
+{{>user/footer}}
+<!-- End Footer Area -->
+<!-- Start Script Area -->
+{{>user/scripts}}
+<!-- End Script Area -->
+<script type="text/javascript">
+    // var slider = tns({
+    //     container: '#hero-slider',
+    //     items: 1,
+    //     slideBy: 'page',
+    //     autoplay: true,
+    //     controls: false,
+    //     nav: true
+    // });
+
+    var slider = tns({
+        container: '.my-slider',
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: true
+    });
+    tns({
+        container: '.feature-slider',
+        items: 4,
+        // slideBy: 'page',
+        autoplay: false,
+        controls: true,
+        nav: false,
+        arrowKeys: true,
+        controlsContainer: "#custom_controlsContainer",
+        nextButton: '#prev',
+        nextButton: '#next',
+        responsive: {
+                240: {
+                    edgePadding: 20,
+                    gutter: 20,
+                    items: 2
+                },
+                700: {
+                    gutter: 30,
+                },
+                900: {
+
+                    items: 4,
+                }
+            }
+    });
+
+    tns({
+        container: '.testimonial-slider',
+        items: 1,
+        autoplay: false,
+        controls: true,
+        nav: false,
+        arrowKeys: true,
+        controlsContainer: "#testi_controlsContainer",
+        nextButton: '#prev',
+        nextButton: '#next'
+    });
+
+    tns({
+        container: '.upcoming-slider',
+        items: 2,
+        autoplay: false,
+        controls: true,
+        nav: false,
+        arrowKeys: true,
+        controlsContainer: "#upcoming_controlsContainer",
+        nextButton: '#prev',
+        nextButton: '#next',
+        responsive: {
+                240: {
+                    edgePadding: 20,
+                    gutter: 20,
+                    items: 1
+                },
+
+                767: {
+                    items:2,
+                }
+            }
+    });
+
+    tns({
+        container: '.blog-slider',
+        items: 4,
+        autoplay: false,
+        controls: true,
+        nav: false,
+        arrowKeys: true,
+        controlsContainer: "#blog_controlsContainer",
+        nextButton: '#prev',
+        nextButton: '#next',
+        responsive: {
+                240: {
+                    edgePadding: 20,
+                    gutter: 20,
+                    items: 1
+                },
+
+                767: {
+                    items:4,
+                }
+            }
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            {{>admin/sidebar}}
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                {{>admin/topbar}}
+                <!-- end topbar -->
+                <!-- dashboard inner -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>Find Chapters</h2>
+                                     {{#ifnoteq success ''}}
+                                    <div class="alert alert-success mt-3" role="alert">
+                                        {{success}}
+                                    </div>
+                                    {{/ifnoteq}}
+                                </div>
+                            </div>
+                        </div>
+                        <form action="/admin/registered-users/" method="post">
+                            <div class="row">
+                                <!-- table section -->
+                                {{!-- <div>
+                                    <p style="padding:15px">
+                                        <a href="/admin/find-chapter/add-chapter"><button type="button"
+                                                class="btn btn-success">Add</button></a>
+                                        <button formaction="/admin/find-chapter/multiPublish?_method=put"
+                                            class="btn btn-success">Publish</button>
+                                        <button formaction="/admin/find-chapter/multiUnPublish?_method=put"
+                                            class="btn btn-success">Unpublish</button>
+                                        <button formaction="/admin/find-chapter/multiDelete?_method=delete"
+                                            class="btn btn-success">Delete</button>
+                                    </p>
+                                </div> --}}
+                                <div class="col-md-12">
+                                    <div class="white_shd full margin_bottom_30">
+                                        <div class="full graph_head">
+                                            <div class="heading1 margin_0 d-flex justify-content-between w-100">
+                                                <h2>Users List</h2>
+                                            </div>
+                                        </div>
+
+                                        <div class="table_section padding_infor_info">
+                                            <div class="table-responsive-sm">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><input type="checkbox" onchange="checkAll(this)"
+                                                                    id="checkall" name="checkall"></th>
+                                                            <th>#</th>
+                                                            <th>Name</th>
+                                                            <th>Email</th>
+                                                            <th>Phone</th>
+                                                            <th>Profession</th>
+                                                            <th>Title</th>
+                                                            <th>Venue</th>
+                                                            <th>City</th>
+                                                            <th>Date</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    {{#users}}
+                                                    <tbody>
+                                                        <tr>
+                                                            <th><input type="checkbox" class="checbox" value="{{id}}"
+                                                                    name="checkbox" onchange="checkbox"></th>
+                                                            <td>{{incitement @index}}</td>
+                                                            <td>{{name}}</td>
+                                                            <td>{{email}}</td>
+                                                            <td>{{phone}}</td>
+                                                            <td>{{profession}}</td>
+                                                            <td>{{event_title}}</td>
+                                                            <td>{{event_address}}</td>
+                                                            <td>{{city}}</td>
+                                                            <td>{{date}}</td>
+                                                            {{!-- <td>{{chapter_date}}</td>
+                                                            <td>{{time}}</td> --}}
+                                                            {{!-- <td class="img-column"
+                                                                style="width: 175px;height:150px;object-fit:contain">
+                                                                <img src="/static/user/images/uploaded_images/{{news_image}}"
+                                                                    height="100%" alt="thumbnail">
+                                                            </td> --}}
+                                                            <td>
+                                                                <div class="btn-wrapper">
+                                                                    <style>
+                                                                        button i {
+                                                                            color: #000;
+                                                                        }
+                                                                    </style>
+                                                                    {{!-- <li class="btn">
+                                                                        <a href="/admin/find-chapter/edit/{{id}}">
+                                                                            <i class="fa-regular fa-pen-to-square"></i>
+                                                                        </a>
+                                                                    </li> --}}
+                                                                    <li class="btn">
+                                                                        <a href="/admin/registered-users/delete/{{id}}">
+                                                                            <i class="fa-solid fa-trash"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    {{!-- <li class="btn">
+                                                                        <a href="">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" name="publishBtn"
+                                                                                    id="play" onclick="switchBtn()"
+                                                                                    class="" value="0">
+                                                                                <span class="slider round"></span>
+                                                                            </label>
+                                                                        </a>
+                                                                    </li> --}}
+                                                                    <div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                        </form>
+                        {{/users}}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- table section -->
+
+    </div>
+    </div>
+
+    <!-- footer -->
+    {{>admin/footer}}
+    </div>
+    <!-- end dashboard inner -->
+    </div>
+    </div>
+    </div>
+    {{>admin/scripts}}
+
+</body>
+
+</html>

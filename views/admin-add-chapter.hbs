@@ -1,0 +1,116 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            {{>admin/sidebar}}
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                {{>admin/topbar}}
+                <!-- end topbar -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>Find Chapters</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- table section -->
+                            <div class="col-md-12">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2>Add Chapter</h2>
+                                        </div>
+                                    </div>
+                                    <div class="table_section padding_infor_info">
+                                        <div class="table-responsive-sm">
+                                            <form action="/admin/find-chapter/add-chapter" method="post">
+                                                <div class="mb-3 mt-3">
+                                                    <label for="fname" class="form-label">Title<span class="errormsg"
+                                                            id="errtitle"></span></label>
+                                                    <input type="text" class="form-control" name="title" id="title"
+                                                        required>
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label>Venue <span class="errormsg"
+                                                            id="errdescription"></span></label>
+                                                    <input class="form-control" rows="4" name="venue" id="venue"
+                                                        required></input>
+                                                </div>
+                                                <div class="mb-3 mt-3">
+                                                    <label>City <span class="errormsg"
+                                                            id="errdescription"></span></label>
+                                                    <input class="form-control" rows="4" name="city" id="venue"
+                                                        required></input>
+                                                </div>
+                                                <div class="mb-3 mt-3">
+                                                    <label>State <span class="errormsg"
+                                                            id="errdescription"></span></label>
+                                                    <input class="form-control" rows="4" name="state" id="venue"
+                                                        required></input>
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="date" class="form-label w-100">Date <a class="float-right" onclick="add_fields()"
+                                                            style="padding:2px 10px;background-color:var(--lava);color:#fff">add
+                                                            more</a></label>
+                                                    <div id="add-input">
+                                                        <input type="date" class="form-control" name="date" id="date"
+                                                            required>
+                                                    </div>
+
+                                                </div>
+                                                <div class="mb-3 mt-3">
+                                                    <label for="date" class="form-label">Time<span class="errormsg"
+                                                            id="errlogo"></span></label>
+                                                    <input type="time" class="form-control" name="time" id="time"
+                                                        required>
+                                                </div>
+                                                <div class="form-group mt-3">
+                                                    <label for="name" class="form-label d-block">Publish Now <span
+                                                            class="errormsg" id="errcatalogue"></span></label>
+                                                    <label class="switch">
+                                                        <input type="checkbox" name="publishBtn" id="play"
+                                                            onclick="switchBtn()" class="" value="0">
+                                                        <span class="slider round"></span>
+                                                    </label>
+                                                </div>
+                                                <button class="main_bt2">Save</button>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table section -->
+
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    {{> admin/footer}}
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function add_fields() {
+            var d = document.getElementById("add-input");
+
+            d.innerHTML += "<br /><input type='date' class='form-control' id='date' name='date' value='' />";
+        }
+    </script>
+
+    {{> admin/scripts}}
+</body>
+
+</html>

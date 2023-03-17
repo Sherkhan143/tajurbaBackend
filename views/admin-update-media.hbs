@@ -1,0 +1,121 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            {{>admin/sidebar}}
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                {{>admin/topbar}}
+                <!-- end topbar -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>Upcoming Events</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- table section -->
+                            <div class="col-md-12">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2>Update Event</h2>
+                                        </div>
+                                    </div>
+                                    <div class="table_section padding_infor_info">
+                                        <div class="table-responsive-sm">
+                                            {{#media}}
+                                            <form action="/admin/media/edit/{{id}}?_method=put" method="post"
+                                                enctype="multipart/form-data">
+                                                <div class="mb-3 mt-3">
+                                                    <label for="fname" class="form-label">Update Name<span class="errormsg"
+                                                            id="errtitle"></span></label>
+                                                    <input type="text" class="form-control" name="title" id="title" value="{{title}}">
+                                                </div>
+
+                                                {{!-- <div class="mb-3 mt-3">
+                                                    <label>Star Rating <span class="errormsg"
+                                                            id="errrating"></span></label>
+                                                    <select class="form-control" name="starrate" id="starrate">
+                                                        <option value="">Select Rating</option>
+                                                        <option value="1">1 Star</option>
+                                                        <option value="2">2 Star</option>
+                                                        <option value="3">3 Star</option>
+                                                        <option value="4">4 Star</option>
+                                                        <option value="5">5 Star</option>
+                                                    </select>
+                                                </div> --}}
+
+                                                <div class="mb-3 mt-3">
+                                                    <label>Update Description <span class="errormsg"
+                                                            id="errdescription"></span></label>
+                                                    <textarea class="form-control" rows="4" name="description"
+                                                        id="description">{{description}}</textarea>
+                                                </div>
+
+                                                {{!-- <div class="mb-3 mt-3">
+                                                    <label for="fname" class="form-label">Name <span class="errormsg"
+                                                            id="errname"></span></label>
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                        required="">
+                                                </div> --}}
+
+                                                {{!-- <div class="mb-3 mt-3">
+                                                    <label for="fname" class="form-label">Company Name <span
+                                                            class="errormsg" id="errcompany"></span></label>
+                                                    <input type="text" class="form-control" name="companyname"
+                                                        id="companyname" required="">
+                                                </div> --}}
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="media" class="form-label">Update Picture <span class="errormsg"
+                                                            id="errlogo"></span></label>
+                                                    <input type="file" class="form-control" name="updateMediaImg" id="media">
+
+                                                     <div class="post-img-wrapper mt-3">
+                                                        <div class="post-img-container">
+                                                            <div class="post-img border border-1">
+                                                                <img src="/static/user/images/uploaded_images/{{media_image}}"
+                                                                    alt="post-image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mt-3">
+                                                     <label for="name" class="form-label d-block">Publish Now <span
+                                                            class="errormsg" id="errcatalogue"></span></label>
+                                                    <label class="switch">
+                                                        <input type="checkbox" name="publishBtn" id="play" onclick="switchBtn()" class="" value="0">
+                                                        <span class="slider round"></span>
+                                                    </label>
+                                                </div>
+                                                <button class="main_bt2">Update</button>
+                                            </form>
+                                            {{/media}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table section -->
+
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    {{>admin/footer}}
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+    {{> admin/scripts}}
+</body>
+
+</html>

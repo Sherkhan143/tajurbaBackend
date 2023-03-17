@@ -1,0 +1,166 @@
+<!-- Start Header Area -->
+{{>user/header}}
+<!-- End Header Area -->
+<!-- Start Nav Area -->
+{{>user/nav}}
+<!-- End Nav Area -->
+
+<!-- ============start page============= -->
+
+<!-- ============start page============= -->
+
+<style>
+    .navbar-area {
+        border-bottom: 1px solid #ccc;
+    }
+
+    #msform fieldset>input {
+        width: 30%;
+    }
+
+    .fieldWithoutPreBtn a {
+        width: 30%;
+    }
+
+    .fieldWithPreBtn .action-button {
+        width: 10% !important;
+        margin-right: 10px;
+    }
+</style>
+
+
+<!-- =========find meeting section start====== -->
+<section class="section free-version-banner" id="find-meeting-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title text-left">
+                    <h2 class="mb-0 ">find a <span class="lava-color">meeting</span> </h2>
+                    <p class="sub-heading">member programs that suit your needs best</p>
+                </div>
+            </div>
+        </div>
+
+        {{!-- <div class="row">
+            <div class="col-md-12">
+                <div class="meeting-form position-relative">
+                    <form class="d-flex align-items-center justify-content-between">
+                        <input type="text" placeholder="State">
+                        <input type="text" placeholder="City">
+                        <div class="button mt-0">
+                            <a href="" class="btn">find a chapter</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> --}}
+    </div>
+</section>
+
+
+
+
+<section class="chapter-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-wrapper meeting-form button">
+                    <form action="/findChapter">
+                        <input type="text" placeholder="City" name="city" required />
+                        <input type="text" name="state" placeholder="State" required />
+                        <button class="btn">See Chapters</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="upcoming-chapter-section">
+    <div class="container">
+        <div class="row">
+            {{#each eventData}}
+            <div class="col-md-6 mb-3">
+                <div class="chapter-wrapper">
+                    <div class="chapter-left-content chapter-content">
+                        <div>
+                            <p>Tajurba</p>
+                            <h4>{{title}}</h4>
+                        </div>
+                        <h4>Tajurba Premium</h4>
+                    </div>
+                    <div class="chapter-right-content chapter-content">
+                        <div>
+                            <h6 class="text-capitalize">{{chapter_venue}}, {{city}}</h6>
+                            <h5 class="text-capitalize mt-2">Choose date to visit</h5>
+                        </div>
+                        <div>
+                        {{!-- <p class=""></p> --}}
+                        {{!-- {{/each}} --}}
+                        <ul>
+                            {{!-- {{#each events}} --}}
+                            <a href="/participate-now/{{chapter_id}}" class="d-block">
+                                <li>{{day}}, {{date}}</li>
+                            </a>
+                            {{!-- {{/each}} --}}
+                        </ul>
+                        {{!-- {{#each eventData}} --}}
+                    </div>
+                        <h6>{{chapter_venue}}</h6>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========find meeting section end====== -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============end page============= -->
+
+<!-- Start Footer Area -->
+{{>user/footer}}
+<!-- End Footer Area -->
+<!-- Start Script Area -->
+{{>user/scripts}}
+<!-- End Script Area -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+
+
+
+</script>
+
+{{!--
+<script type="text/javascript">
+    $(function () {
+        $("#search-google").autocomplete({
+            name: 'search-google',
+            source: 'http://localhost:3000/search?key=%QUERY',
+            limit: 4
+        });
+    });
+</script> --}}
+
+</body>
+
+</html>

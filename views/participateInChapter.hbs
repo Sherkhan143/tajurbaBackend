@@ -1,0 +1,81 @@
+<!-- Start Header Area -->
+{{>user/header}}
+<!-- End Header Area -->
+<!-- Start Nav Area -->
+{{>user/nav}}
+<!-- End Nav Area -->
+
+<!-- ============start page============= -->
+
+<style>
+    .participate-form-wrapper{
+        width: 70%;
+    }
+
+     .participate-form-wrapper input{
+        width: 100%;
+     }
+
+     .navbar-area {
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+
+
+<section class="section" id="participate-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="participate-form-wrapper button mx-auto">
+                    <h2 class="mb-3">Fill the form to participate</h2>
+                
+                    <form action="/participate-now/{{eventId}}" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" placeholder="Name" name="name" required />
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" name="profession" placeholder="Profession" required />
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" name="phone" placeholder="Phone" required />
+                            </div>
+                        </div>
+                        <button class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ============end page============= -->
+
+<!-- Start Footer Area -->
+{{>user/footer}}
+<!-- End Footer Area -->
+<!-- Start Script Area -->
+{{>user/scripts}}
+<!-- End Script Area -->
+{{!--
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
+
+</body>
+
+</html>

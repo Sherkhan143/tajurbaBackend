@@ -1,0 +1,100 @@
+{{>admin/header}}
+
+<style>
+    .login-nav {
+        width: 100%;
+        background-color: var(--gunmetal);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+
+    .login-container {
+        width: 400px;
+        box-shadow: 0px 0px 13px 3px #ccc;
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    input {
+        height: 55px;
+        line-height: 55px;
+        width: 100%;
+        border: 1px solid #e6e2f5;
+        padding: 0px 10px;
+        color: #333;
+        border-radius: 0px;
+        font-weight: 400;
+        border: none;
+        border-bottom: 1px solid #0a0a0a42;
+        border-radius: 0;
+
+    }
+
+    .button .btn {
+        width: 100%;
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        background-color: var(--lava);
+        color: #fff;
+        border: none;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        border-radius: 0;
+    }
+
+    .footer-wrapper{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row position-relative" style="height:100vh; align-items:center">
+        <nav class="login-nav">
+            <div class="logo_section">
+                <a href="/admin"><img class="img-responsive" src="/static/admin/images/logo/tajurba-logo.svg"
+                        alt="#" /></a>
+            </div>
+        </nav>
+        <div class="col-12">
+            <div class="login-container">
+                <form class="form" method="POST" action="/admin/auth">
+                    <div class="col-12">
+                        <h1>LogIn</h1>
+                        <div class="col-12 p-0">
+                            <div class="form-group">
+                                <input name="email" type="text" placeholder="Your Email" required="required">
+                            </div>
+                        </div>
+                        <div class="col-12 p-0">
+                            <div class="form-group">
+                                <input name="password" type="password" placeholder="Your Password" required="required">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-wrapper">
+            {{>admin/footer}}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{{>admin/scripts}}

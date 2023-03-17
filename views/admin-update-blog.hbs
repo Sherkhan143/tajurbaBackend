@@ -1,0 +1,197 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            {{>admin/sidebar}}
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                {{>admin/topbar}}
+                <!-- end topbar -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>Blog</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- table section -->
+                            <div class="col-md-12">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2>Update Blog</h2>
+                                        </div>
+                                    </div>
+                                    {{#blogs}}
+                                    <div class="table_section padding_infor_info">
+                                        <div class="table-responsive-sm">
+                                            <form action="/admin/blogs/edit/{{id}}?_method=put" method="post"
+                                                enctype="multipart/form-data">
+                                                <div class="mb-3 mt-3">
+                                                    <label for="title" class="form-label">Title <span class="errormsg"
+                                                            id="errname"></span></label>
+                                                    <input type="text" class="form-control" name="title"
+                                                        value="{{title}}">
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label>Meta Description</label>
+                                                    <input type="text" class="form-control" name="metadesc"
+                                                        value="{{meta_description}}" id="metadesc">
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label>Meta Keywords</label>
+                                                    <input type="text" class="form-control" name="metakeywords"
+                                                        value="{{meta_keywords}}" id="metakeywords">
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label>Category <span class="errormsg"
+                                                            id="errcategory"></span></label>
+                                                    <select class="form-control" name="categoryid" id="categoryid">
+                                                        <option value="{{category_id}}">Select Category</option>
+                                                        <option value="1">Blog Category 1</option>
+                                                        <option value="2">Blog Category 2</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="details">Details</label>
+                                                    <textarea name="details" class="form-control" value="hello"
+                                                        cols="30" rows="10">{{blog_detail}}</textarea>
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="name" class="form-label">Update Feature <span
+                                                            class="errormsg" id="errproductimage"></span></label>
+                                                    <input type="file" class="form-control" name="featureImage"
+                                                        id="postimage">
+                                                    <div class="feature-img-wrapper mt-3">
+                                                        <img src="/static/user/images/uploaded_images/{{feature_image}}"
+                                                            alt="#">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="name" class="form-label">Update Thumbnails <span
+                                                            class="errormsg" id="errcatalogue"></span></label>
+                                                    <input type="file" class="form-control" name="thumbnails"
+                                                        id="thumbnail-img">
+                                                    <div class="thumbnail-img-wrapper mt-3">
+                                                        <img src="/static/user/images/uploaded_images/{{thumbnail_image}}"
+                                                            alt="#">
+                                                    </div>
+                                                </div>
+                                                {{/blogs}}
+
+                                                {{!-- <div class="mb-3 mt-3">
+                                                    <label for="name" class="form-label">Post Images <span
+                                                            style="color:green">**Drag or insert multiple images</span>
+                                                        <span class="errormsg" id="errproductimages"></span></label>
+                                                    <input type="file" class="form-control" required multiple
+                                                        name="postImages" id="postimages"> --}}
+
+                                                    {{!-- <div class="container"> --}}
+                                                        {{!-- <fieldset class="form-group">
+                                                            <a href="javascript:void(0)"
+                                                                onclick="$('#pro-image').click()">Upload Image</a>
+                                                            <input type="file" id="pro-image" name="pro-image"
+                                                                style="display: none;" class="form-control" multiple>
+                                                        </fieldset>
+                                                        <div class="preview-images-zone">
+                                                            {{#postImages}}
+                                                            <div
+                                                                class="preview-image preview-show-{{incitement @index}}">
+                                                                <div class="image-cancel" data-no={{incitement @index}}>
+                                                                    x</div>
+                                                                <div class="image-zone"><img id="pro-img-1"
+                                                                        src="/static/user/images/uploaded_images/{{post_image}}">
+                                                                </div>
+                                                                <div class="tools-edit-image"><a
+                                                                        href="javascript:void(0)" data-no={{incitement
+                                                                        @index}}
+                                                                        class="btn btn-light btn-edit-image">edit</a>
+                                                                </div>
+                                                            </div>
+                                                            {{/postImages}}
+                                                        </div> --}}
+                                                        {{!--
+                                                    </div> --}}
+                                                    {{!--
+                                                </div> --}}
+
+                                                <div class="mb-3 mt-3">
+                                                    <label for="name" class="form-label">Update Post Images <span
+                                                            class="errormsg" id="errproductimage"></span></label>
+                                                        <input type="file" class="form-control" multiple
+                                                        name="postImages" id="postimages">
+                                                    <div class="post-img-wrapper mt-3">
+                                                        {{#postImages}}
+                                                        <div class="post-img-container">
+                                                            <div class="post-img">
+                                                                <img src="/static/user/images/uploaded_images/{{post_image}}"
+                                                                    alt="post-image">
+                                                            </div>
+                                                            <div class="post-update-btns">
+                                                                <a href="/admin/blogs/update/post-image/{{id}}">
+                                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                                </a>
+                                                                <a href="/admin/blogs/delete/post-image/{{id}}">
+                                                                    <i class="fa-solid fa-trash"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        {{/postImages}}
+                                                    </div>
+                                                </div>
+
+                                                {{#blogs}}
+                                                <div class="form-group">
+                                                    <input class="form-control form-control-lg" type="date"
+                                                        name="postingdate" id="postingdate" value="{{created_at}}">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="name" class="form-label d-block">Publish Now <span
+                                                            class="errormsg" id="errcatalogue"></span></label>
+                                                    <label class="switch">
+                                                        <input type="checkbox" name="publishBtn" id="play"
+                                                            onclick="switchBtn()" value="0">
+                                                        <span class="slider round"></span>
+                                                    </label>
+                                                </div>
+                                                {{/blogs}}
+
+                                                <button class="main_bt2" name="btnsave">Update</button>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table section -->
+
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    {{>admin/footer}}
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+
+
+    {{> admin/scripts}}
+
+</body>
+
+</html>

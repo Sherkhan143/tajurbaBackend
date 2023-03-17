@@ -1,0 +1,78 @@
+<!-- Start Header Area -->
+{{>user/header}}
+<!-- End Header Area -->
+<!-- Start Nav Area -->
+{{>user/nav}}
+<!-- End Nav Area -->
+
+<!-- ============start page============= -->
+
+<style>
+    .navbar-area {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .our-blog-page .single-news {
+        margin-bottom: 30px;
+    }
+
+    .our-blog-page .section-title h2 {
+        font-size: 40px;
+    }
+</style>
+
+
+<div class="latest-news-area section our-blog-page" id="our-blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2 class="mb-0 ">our <span class="lava-color">blogs</span> </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-wrapper position-relative">
+            <div class="row blog-slider">
+                {{#data}}
+                <div class="col-lg-3 col-md-6 col-12 slider-item">
+                    <!-- Single News -->
+                    <div class="single-news wow fadeInUp" data-wow-delay=".2s">
+                        <div class="image">
+                            <img class="thumb" src="/static/user/images/uploaded_images/{{feature_image}}" alt="#">
+
+                        </div>
+                        <div class="content-body">
+                            <h4 class="title"><a>{{title}}</a></h4>
+                            <p class="my-3">{{blog_detail}}</p>
+                            <div class="meta-details">
+                                <a href="/blog/{{id}}">
+                                    <span class="text-uppercase lava-color">read more</span>
+                                </a>
+                                <span class="text-uppercase">{{created_at}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+                </div>
+                {{/data}}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- ============end page============= -->
+
+<!-- Start Footer Area -->
+{{>user/footer}}
+<!-- End Footer Area -->
+<!-- Start Script Area -->
+{{>user/scripts}}
+<!-- End Script Area -->
+
+</body>
+
+</html>

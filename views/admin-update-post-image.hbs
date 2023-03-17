@@ -1,0 +1,76 @@
+{{>admin/header}}
+
+<body class="inner_page widgets">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            {{>admin/sidebar}}
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                {{>admin/topbar}}
+                <!-- end topbar -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        <div class="row column_title">
+                            <div class="col-md-12">
+                                <div class="page_title">
+                                    <h2>Blog</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- table section -->
+                            <div class="col-md-12">
+                                <div class="white_shd full margin_bottom_30">
+                                    <div class="full graph_head">
+                                        <div class="heading1 margin_0">
+                                            <h2>Update Post Image</h2>
+                                        </div>
+                                    </div>
+                                    <div class="table_section padding_infor_info">
+                                        <div class="table-responsive-sm">
+                                            {{#postImageData}}
+                                            <form action="/admin/blogs/update/post-image/{{id}}?_method=put" method="post"
+                                                enctype="multipart/form-data">
+                                                <div class="mb-3 mt-3">
+                                                    <label for="name" class="form-label">Update Post Images <span
+                                                            class="errormsg" id="errproductimage"></span></label>
+                                                        <input type="file" class="form-control"
+                                                        name="updateSinglePostImage" id="postimages" required>
+                                                    <div class="post-img-wrapper mt-3">
+                                                        <div class="post-img-container">
+                                                            <div class="post-img">
+                                                                <img src="/static/user/images/uploaded_images/{{post_image}}"
+                                                                    alt="post-image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="main_bt2" name="btnsave">Update</button>
+                                            </form>
+                                            {{/postImageData}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table section -->
+
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    {{>admin/footer}}
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+
+
+    {{> admin/scripts}}
+
+</body>
+
+</html>

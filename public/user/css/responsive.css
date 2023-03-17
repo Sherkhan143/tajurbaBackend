@@ -1,0 +1,352 @@
+@media (max-width: 767px){
+    #hero-cta-section .brand-list li h2{
+        font-size: 25px;
+    }
+
+    #hero-cta-section .brand-list li h3{
+        font-size: 18px;
+    }
+
+    .floating-btn{
+        right: -15px;
+    }
+
+    .cta-head-wrapper h3 {
+        font-size: 25px;
+    }
+
+    .cta-head-wrapper{
+        height: 150px;
+    }
+
+    #hero-cta-section .button .btn {
+        width: auto;
+        font-size: 14px;
+    }
+
+     .section-title h2{
+        padding-bottom: 0px;
+    }
+
+    #hero-cta-section{
+        top: 0px;
+    }
+
+    .section-title h2 span{
+        font-size: 25px;
+        text-transform: capitalize;
+    }
+
+    #hero-cta-section .section-title {
+        padding-left: 30px !important;
+        padding-top: 30px !important;
+    }
+
+    #hero-cta-section .brand-logo-wrapper{
+        margin-top: 30px;
+    }
+
+    .sub-heading {
+        font-size: 18px !important;
+    }
+
+    #next, #prev {
+        font-size: 18px;
+    }
+
+    #testimonial-section{
+        padding-bottom: 0 !important;
+    }
+
+    .heading-font {
+        font-size: 25px !important;
+    }
+
+    .testi-img-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+
+    .testimonial-wrapper::before {
+        width: 50px;
+        height: 35px;
+        top: 4%;
+        left: 4%;
+    }
+
+    .testimonial-wrapper {
+        width: 100%;
+    }
+
+    .grids .grid-content h3{
+        margin-bottom: 18px;
+    }
+
+    .grid-wrapper{
+        row-gap: 0;
+    }
+
+    .grids {
+        margin-bottom: 20px;
+    }
+
+    .grids:hover .grid-content h3 {
+        font-size: 20px;
+    }
+
+    #member-strip .intro-video-play .button{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #member-strip .section-title.white-text span, #member-strip .section-title.white-text p {
+        font-size: 18px;
+    }
+
+    .meeting-form form{
+        flex-direction: column;
+        margin-top: 25px;
+        row-gap: 20px;
+    }
+
+    .meeting-form input{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .meeting-form .button, #find-meeting-section .btn{
+        width: 100%;
+    }
+
+    .event-content h4, .event-content p{
+        font-size: 8px;
+    }
+
+    .contact-form-wrapper{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .inputs-wrapper, .texts-wrapper {
+        width: 100%;
+        align-items: center !important; 
+    }
+
+    .inputs-wrapper input, .texts-wrapper textarea{
+        padding: 10px 15px;
+    }
+
+    #get-in-touch-section .section-title h2{
+        margin-bottom: 20px !important;
+    }
+
+    .hero-area .hero-text {
+        margin-top: 0;
+        padding: 20px;
+    }
+    
+    .ml-150 {
+        margin-left: 0;
+    }
+
+    .slider-bg-img-a{
+        height: 550px;
+    }
+
+    .hero-area .hero-text h3 {
+        font-size: 20px;
+    }
+
+    .hero-area .hero-text h2 {
+        font-size: 22px;
+    }
+
+    .hero-area .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-area .hero-text p {
+        font-size: 20px !important;
+    }
+
+    #hero-slider-ow .tns-nav{
+        left: 0%;
+    }
+
+    .fixed-txt {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .col-bg {
+        width: 8% !important;
+        padding: 0 !important;
+    }
+
+    .col-width-b {
+        width: 83.333333% !important;
+        padding: 0 !important;
+    }
+
+    .col-width {
+        width: 8.333333% !important;
+    }
+
+    .navbar-toggler{
+        background: var(--lava);
+        margin-right: 10px;
+        padding: 2px 8px;
+        border-radius: 0;
+    }
+
+    .navbar-toggler .toggler-icon{
+        background: #fff;
+        width: 20px;
+    }
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+    }
+
+    #why-tajurba-page-section-1 .about-left {
+        width: 100%;
+    }
+
+    #why-tajurba-page-section-1{
+        padding-top: 0;
+    }
+
+    #why-tajurba-page-section .about-right, #why-tajurba-page-section-1 .about-right {
+        height: 350px;
+    }
+
+    .why-strip-content h4 {
+        font-size: 25px;
+    }
+
+    .why-strip-content p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .why-page-strip{
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .contact-us .form-main{
+        padding: 30px;
+    }
+
+    .contact-us{
+        padding-top: 0;
+    }
+
+    .life-img-wrapper{
+        margin-bottom: 20px;
+    }
+
+    .section-title h2 span{
+        /* font-size: 40px; */
+        text-transform: capitalize;
+    }
+
+    .founder-content{
+        padding: 40px;
+    }
+
+    .history-content-wrapper .section-title h2 {
+        font-size: 40px;
+    }
+
+    #our-founder-page .section-title h2{
+        text-transform: capitalize;
+    }
+
+    .history-big-head {
+        font-size: 25px;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .history-content-wrapper p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .circular-chart{
+        margin: 0 auto !important;
+    }
+
+    .single-chart h6{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .history-content-wrapper{
+        margin-top: 40px;
+    }
+
+    .history-img-wrapper{
+        height: 350px;
+    }
+
+    .align-left {
+        text-align: center;
+    }
+
+    .events-date-wrapper{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .events-date-wrapper h5{
+        margin: 0;
+        font-size: 30px;
+        order: 1;
+    }
+
+    .events-date-wrapper h2{
+        font-size: 30px;
+    }
+
+    .events-date-wrapper h5::after{
+        width: 70%;
+        height: 3px;
+    }
+
+    .event-content-wrapper{
+        width: 100%;
+        margin-top: 20px;
+        padding: 5px 10px;
+    }
+
+    .event-content-wrapper .button{
+        border: none;
+    }
+
+    .event-content-para {
+        padding-right: 0;
+    }
+
+    .event-title {
+        padding-right: 0;
+    }
+
+    #member-program-section .section-title h2 {
+        font-size: 40px;
+        text-align: left;
+        margin-bottom: 10px !important;
+    }
+
+}
