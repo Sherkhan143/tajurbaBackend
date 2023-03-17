@@ -6,12 +6,18 @@ const con = mysql.createConnection({
     // database : "tajurba",
     // port : 3306,
     // multipleStatements:true
-    host : "85.187.128.11",
-    user: "iscom_uniworld",
-    password: "uniworld@admin1234",
-    database:"iscom_tajurba",
+    host : "sql10.freesqldatabase.com",
+    user: "sql10606488",
+    password: "AmHEigxuQp",
+    database:"sql10606488",
     port : 3306,
     multipleStatements:true
+    // host : "85.187.128.11",
+    // user: "iscom_uniworld",
+    // password: "uniworld@admin1234",
+    // database:"iscom_tajurba",
+    // port : 3306,
+    // multipleStatements:true
 });
 
 con.connect((err) => {
