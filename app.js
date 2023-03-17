@@ -3,7 +3,7 @@ const session = require('express-session');
 const mysql = require('mysql');
 var MySQLStore = require('express-mysql-session')(session);
 const flash = require('connect-flash');
-const userRoutes = require('./routes/user/routes.js');
+// const userRoutes = require('./routes/user/routes.js');
 const blogRoutes = require('./routes/admin/blog.js')
 const testimonialRoutes = require('./routes/admin/testimonial.js')
 const bannerRoutes = require('./routes/admin/banner.js')
@@ -17,7 +17,7 @@ const eventsUsersRoutes = require('./routes/admin/eventsUsers.js')
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
 const methodOverride = require('method-override');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3005;
 
 // const rootPath = path.join(__dirname, '../');
 
@@ -71,7 +71,7 @@ app.use(methodOverride('_method'));
 
 app.use(flash());
 
-app.use('/', userRoutes);
+// app.use('/', userRoutes);
 app.use('/admin',loginRoutes);
 app.use('/admin/blogs', blogRoutes);
 app.use('/admin/testimonials', testimonialRoutes);
@@ -99,7 +99,7 @@ hbs.registerHelper('ifnoteq', function (a, b, options) {
 });
 
 app.listen(port, function () {
-    console.log("server started at 3000");
+    console.log("server started at 3005");
 })
 
 
