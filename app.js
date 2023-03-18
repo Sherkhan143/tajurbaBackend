@@ -104,7 +104,7 @@ hbs.registerHelper('ifnoteq', function (a, b, options) {
 });
 
 app.listen(port, function () {
-    console.log("server started at 3005");
+    console.log(`server started at ${port}`);
 })
 
 
